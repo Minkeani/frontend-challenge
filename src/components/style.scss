@@ -1,0 +1,27 @@
+.fav {
+    position: absolute;
+    filter: drop-shadow(0 0 3px white);
+    width: 35px!important;
+    object-fit: cover;
+    cursor: pointer;
+    filter: grayscale(100%);
+    right: 50px;
+    top: 200px;
+    &:hover {
+        filter: grayscale(50%);
+    }
+    &.active {
+        filter: grayscale(0%);
+    }
+}
+
+.card {
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px 0;
+    transform: scale(1.2);
+
+    
+}
