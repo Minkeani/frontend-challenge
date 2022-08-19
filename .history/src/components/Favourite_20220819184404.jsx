@@ -24,7 +24,7 @@ export default function Favourite() {
                 {favouriteList.map(item => (
                         <ImageListItem key={item} style={{'display': 'flex', 'alignItems': 'center', 'justifyContent': 'center'}}>
                             <img className='card' src={item} alt="" style={{'width': '225px', 'maxHeight': '225px'}}/>
-                            <img className={classNames('fav', favouriteList.includes(item) ? 'active' : '')} onClick={() =>  addFavourite(item)}  src={heart} alt=""/>
+                            <img className={classNames('fav', favouriteList.includes(item) ? 'active' : '')} onClick={() => setFavourite(false)}  src={heart} alt=""/>
 
                         </ImageListItem>
                 ))}

@@ -1,29 +1,25 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ImageList, ImageListItem  } from '@mui/material'
 import classNames from 'classnames'
 import './style.scss'
 import Pagination from './Pagination'
 import heart from '../img/heart.png'
-import {FavouriteContext} from '../context/context'
 
 export default function Cats() {
     const [data, setData] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
     const [countCats] = useState(10)
-    const {favourite, setFavourite} = useContext(FavouriteContext)
-     const {favouriteList, setFavouriteList} = useContext(FavouriteContext)
+    const [favourite, setFavourite] = useState(false)
+     const [favouriteList, setFavouriteList] = useState([])
 
 
     const lastIndex = countCats*currentPage
     const firstPAge = lastIndex - countCats
     const currentCats = data.slice(firstPAge, lastIndex)
 
-    const addFavourite = (url) => {
-      if(favouriteList.includes(url)) {setFavouriteList(favouriteList.filter(cat => cat !== url))}
-      else {
-        setFavourite(favouriteList.push(url))
-      }
-    }
+    function addFavourite(url) {
+            i
+          }
     
     
     useEffect(() => {

@@ -13,14 +13,7 @@ function App() {
   return (
     <div className="App">
 
-      <FavouriteContext.Provider
-        value={{
-          favourite,
-          setFavourite,
-          favouriteList,
-          setFavouriteList
-        }}
-      >
+      <FavouriteContext.Provider>
         <BrowserRouter>
           <Header/>
         </BrowserRouter>

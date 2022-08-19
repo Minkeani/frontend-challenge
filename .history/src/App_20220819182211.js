@@ -12,21 +12,7 @@ function App() {
 
   return (
     <div className="App">
-
-      <FavouriteContext.Provider
-        value={{
-          favourite,
-          setFavourite,
-          favouriteList,
-          setFavouriteList
-        }}
-      >
-        <BrowserRouter>
-          <Header/>
-        </BrowserRouter>
-      </FavouriteContext.Provider>
-      
-       
+        <Header/>
     </div>
   );
 }

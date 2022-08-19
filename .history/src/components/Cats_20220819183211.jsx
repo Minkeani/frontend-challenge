@@ -18,7 +18,7 @@ export default function Cats() {
     const firstPAge = lastIndex - countCats
     const currentCats = data.slice(firstPAge, lastIndex)
 
-    const addFavourite = (url) => {
+    function addFavourite(url) {
       if(favouriteList.includes(url)) {setFavouriteList(favouriteList.filter(cat => cat !== url))}
       else {
         setFavourite(favouriteList.push(url))
