@@ -10,6 +10,7 @@ export default function Cats() {
     const [data, setData] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
     const [countCats] = useState(10)
+    const {favourite, setFavourite} = useContext(FavouriteContext)
      const {favouriteList, setFavouriteList} = useContext(FavouriteContext)
 
 
@@ -21,6 +22,7 @@ export default function Cats() {
       if(favouriteList.includes(url)) {setFavouriteList(favouriteList.filter(cat => cat !== url))}
       else {
         setFavouriteList([...favouriteList, url])
+        console.log(favouriteList);
       }
     }
     

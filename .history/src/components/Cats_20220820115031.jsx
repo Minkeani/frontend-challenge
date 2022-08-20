@@ -10,6 +10,7 @@ export default function Cats() {
     const [data, setData] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
     const [countCats] = useState(10)
+    const {favourite, setFavourite} = useContext(FavouriteContext)
      const {favouriteList, setFavouriteList} = useContext(FavouriteContext)
 
 
@@ -17,10 +18,11 @@ export default function Cats() {
     const firstPAge = lastIndex - countCats
     const currentCats = data.slice(firstPAge, lastIndex)
 
-    const addFavourite = async (url) => {
+    const addFavourite = (url) => {
       if(favouriteList.includes(url)) {setFavouriteList(favouriteList.filter(cat => cat !== url))}
       else {
-        setFavouriteList([...favouriteList, url])
+        favouriteList = favouriteList.push(url)
+        setFavouriteList(favouriteList)
       }
     }
     
